@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pdf View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PdfView" customModule="PDFGreat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uO-m9-uWt">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <state key="normal" title="Shared"/>
+                                <connections>
+                                    <action selector="shared:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVh-PE-Xie"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh4-1h-8jy" customClass="PDFView">
+                                <rect key="frame" x="20" y="44" width="374" height="780"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fh4-1h-8jy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="01S-Eu-wlK"/>
+                            <constraint firstItem="Fh4-1h-8jy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="870-jb-49Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3uO-m9-uWt" secondAttribute="trailing" constant="20" id="Q7o-7X-IVd"/>
+                            <constraint firstItem="3uO-m9-uWt" firstAttribute="top" secondItem="Fh4-1h-8jy" secondAttribute="bottom" constant="8" id="SXK-Q2-wvL"/>
+                            <constraint firstItem="3uO-m9-uWt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TgJ-NS-SYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fh4-1h-8jy" secondAttribute="trailing" constant="20" id="eFb-Gk-Rdh"/>
+                            <constraint firstItem="3uO-m9-uWt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rEN-Al-Tf4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pdfView" destination="Fh4-1h-8jy" id="hbm-22-4DB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
